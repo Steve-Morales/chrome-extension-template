@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "MY EXTENSION",
+    "version": "0.0.0.1",
+    "description": "A TEMPLATE EXTENSION",
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "background": {
+        "service_worker": "src/background/service_worker.js"
+      },
+    "permissions": [
+      "activeTab",
+      "scripting"
+    ],
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["src/content/content.js"]
+      }
+    ],
+    "host_permissions": ["<all_urls>"]
+}
